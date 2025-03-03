@@ -38,6 +38,11 @@
             max-width: 200px;
             border-radius: 50%;
             margin-bottom: 15px;
+            animation: rotateIn 2s infinite alternate;
+        }
+        @keyframes rotateIn {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
         h1 {
             color: #ff4081;
@@ -101,6 +106,13 @@
             background: #ffccd5;
             border-radius: 10px;
         }
+        .joke-container {
+            background: #fff3f4;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
         footer {
             margin-top: 30px;
             background: #ff80ab;
@@ -131,8 +143,33 @@
     <div class="menu-btn" onclick="toggleMenu()">☰</div>
     <div class="sidebar" id="sidebar">
         <h3>Jokes & Fun</h3>
-        <p>😂 Why did the computer catch a cold? Because it left its Windows open! 🤣</p>
-        <p>😜 If Leylah were a superhero, her power would be making everyone laugh in just 3 seconds! ⚡😂</p>
+        <div class="joke-container">
+            <p>😂 Leylah, unajua kwa nini samaki hawavai viatu? Because they're always swimming, so they don’t need them! 😂</p>
+        </div>
+        <div class="joke-container">
+            <p>⚡ Leylah, kwa nini wewe ni kama charger? Because unafanya kila kitu kuwa powered up! ⚡</p>
+        </div>
+        <div class="joke-container">
+            <p>😂 Hey Leylah, kama wewe ni malkia, basi mimi ni nani? I guess I’m your royal comedian! 😂</p>
+        </div>
+        <div class="joke-container">
+            <p>🍕 Leylah, unajua kwa nini watoto wanapenda pizza? Because it’s a piece of heaven, but wewe it’s a “pesa”! 🍕</p>
+        </div>
+        <div class="joke-container">
+            <p>😂 Kila wakati nikiwa na Leylah, najua tutacheka! Because you’re my “laugh-yal”! 😂</p>
+        </div>
+        <div class="joke-container">
+            <p>🥛 Leylah, unajua kwanini maziwa ni kama wewe? Because they’re always fresh and full of goodness! 🐄🥛</p>
+        </div>
+        <div class="joke-container">
+            <p>🎤 Hivi, Leylah, unajua ni nani mwenye sauti nzuri zaidi kuliko wewe? Your echo! You always come back with a perfect reply! 🎤</p>
+        </div>
+        <div class="joke-container">
+            <p>🐾 Leylah, kwa nini wewe ni kama mnyama mrembo? Because you’re paws-itively cute! 🐾</p>
+        </div>
+        <div class="joke-container">
+            <p>😄 Siwezi kusema enough jokes, lakini Leylah, you always make it “punny”! 😄</p>
+        </div>
     </div>
 
     <div class="container">
@@ -146,10 +183,6 @@
     <br>
     <center>
         <p class="sweet-words">Mdogo wangu mpenzi, hakuna mtu kama wewe! Nakupenda sana, lakini usinizingue sana 😂💕</p>
-    </center>
-
-    <center>
-        <p style="border-radius:10px; border:solid pink 6px; background: #ffccd5; padding: 10px; font-weight: bold;">Huyu mtu hapa hataki shida... 😂💖</p>
     </center>
 
     <footer>
