@@ -9,9 +9,10 @@
             font-family: 'Arial', sans-serif;
             background: linear-gradient(to right, #ff9a9e, #fad0c4);
             text-align: center;
-            padding: 50px;
+            padding: 20px;
             animation: fadeIn 2s ease-in;
-            overflow: hidden;
+            overflow-x: hidden;
+            margin: 0;
         }
         @keyframes fadeIn {
             from { opacity: 0; }
@@ -25,13 +26,16 @@
             display: inline-block;
             animation: bounceIn 1.5s ease-in-out;
             position: relative;
+            max-width: 90%;
+            margin: auto;
         }
         @keyframes bounceIn {
             0% { transform: scale(0.5); opacity: 0; }
             100% { transform: scale(1); opacity: 1; }
         }
         img {
-            width: 200px;
+            width: 100%;
+            max-width: 200px;
             border-radius: 50%;
             margin-bottom: 15px;
         }
@@ -74,6 +78,9 @@
             background: pink;
             padding: 20px;
             transition: 0.3s;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+            z-index: 1000;
+            overflow: hidden;
         }
         .menu-btn {
             position: fixed;
@@ -81,6 +88,18 @@
             top: 10px;
             font-size: 30px;
             cursor: pointer;
+            z-index: 1100;
+            background: #ff80ab;
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: white;
+        }
+        .fun-box {
+            max-width: 80%;
+            margin: 20px auto;
+            padding: 15px;
+            background: #ffccd5;
+            border-radius: 10px;
         }
         footer {
             margin-top: 30px;
@@ -89,6 +108,21 @@
             color: white;
             font-weight: bold;
             border-radius: 10px;
+            text-align: center;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            p {
+                font-size: 16px;
+            }
+            .menu-btn {
+                font-size: 24px;
+            }
+            .sidebar {
+                width: 200px;
+            }
         }
     </style>
 </head>
@@ -96,32 +130,27 @@
     <div class="falling-hearts">❤️💖💞💕</div>
     <div class="menu-btn" onclick="toggleMenu()">☰</div>
     <div class="sidebar" id="sidebar">
-        <h3>Memories & Jokes</h3>
-        <p>😂 Remember when you tried to hide my phone and got caught instantly? Hilarious!</p>
-        <p>💖 Every hug from you is like a warm, cozy blanket of love.</p>
+        <h3>Jokes & Fun</h3>
+        <p>😂 Why did the computer catch a cold? Because it left its Windows open! 🤣</p>
+        <p>😜 If Leylah were a superhero, her power would be making everyone laugh in just 3 seconds! ⚡😂</p>
     </div>
 
     <div class="container">
         <img src="Screenshot_20250209-234737.png" alt="Leylah's Picture">
         <h1>For My Sweet Little Sister Leylah 💖</h1>
-        <p>You are the brightest star in my sky, the sweetest melody in my heart, and the most precious gift in my life.</p>
-        <p>Keep shining, keep smiling, and always remember how much you are loved! 💕</p>
+        <p>You are the brightest star in my sky, the funniest comic in my life, and the craziest little troublemaker I love the most! 😂💖</p>
+        <p>Keep being awesome, and never stop making us laugh! 😆💕</p>
         <p class="heart">❤️❤️❤️</p>
     </div>
 
     <br>
     <center>
-        <p class="sweet-words">Mdogo wangu mpenzi, hakuna mtu kama wewe! Nakupenda sanaaa, na daima nitakuwa hapa kukulinda na kukufanya uwe na furaha! 😘💕</p>
+        <p class="sweet-words">Mdogo wangu mpenzi, hakuna mtu kama wewe! Nakupenda sana, lakini usinizingue sana 😂💕</p>
     </center>
 
     <center>
-        <p style="border-radius:10px; border:solid pink 6px; background: #ffccd5; padding: 10px; font-weight: bold;">Ila sikuambii kituuuu... Just joking! 😂💖</p>
+        <p style="border-radius:10px; border:solid pink 6px; background: #ffccd5; padding: 10px; font-weight: bold;">Huyu mtu hapa hataki shida... 😂💖</p>
     </center>
-
-    <div class="fun-box">
-        <p>🎀 Leylah, do you know? You are like a rainbow after the rain, making life more colorful and bright! 🌈💖</p>
-        <p>Always stay as sweet and kind as you are, and never stop dreaming big! ⭐✨</p>
-    </div>
 
     <footer>
         Made with ❤️ by SirTheProgrammer
@@ -130,13 +159,8 @@
     <script>
         function toggleMenu() {
             let sidebar = document.getElementById("sidebar");
-            if (sidebar.style.left === "0px") {
-                sidebar.style.left = "-250px";
-            } else {
-                sidebar.style.left = "0px";
-            }
+            sidebar.style.left = (sidebar.style.left === "0px") ? "-250px" : "0px";
         }
     </script>
 </body>
 </html>
-
