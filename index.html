@@ -11,6 +11,7 @@
             text-align: center;
             padding: 50px;
             animation: fadeIn 2s ease-in;
+            overflow: hidden;
         }
         @keyframes fadeIn {
             from { opacity: 0; }
@@ -23,6 +24,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             display: inline-block;
             animation: bounceIn 1.5s ease-in-out;
+            position: relative;
         }
         @keyframes bounceIn {
             0% { transform: scale(0.5); opacity: 0; }
@@ -32,11 +34,6 @@
             width: 200px;
             border-radius: 50%;
             margin-bottom: 15px;
-            animation: spin 4s linear infinite;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
         }
         h1 {
             color: #ff4081;
@@ -55,36 +52,55 @@
             from { transform: scale(1); }
             to { transform: scale(1.2); }
         }
-        .sweet-words {
+        .falling-hearts {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            color: red;
+            animation: fall 5s linear infinite;
+        }
+        @keyframes fall {
+            from { top: -10%; opacity: 1; }
+            to { top: 100%; opacity: 0; }
+        }
+        .sidebar {
+            position: fixed;
+            left: -250px;
+            top: 0;
+            width: 250px;
+            height: 100%;
             background: pink;
+            padding: 20px;
+            transition: 0.3s;
+        }
+        .menu-btn {
+            position: fixed;
+            left: 10px;
+            top: 10px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        footer {
+            margin-top: 30px;
+            background: #ff80ab;
+            padding: 10px;
             color: white;
-            padding: 15px;
-            border-radius: 10px;
-            font-size: 20px;
             font-weight: bold;
-            animation: glow 1s infinite alternate;
-        }
-        @keyframes glow {
-            from { box-shadow: 0 0 10px pink; }
-            to { box-shadow: 0 0 20px #ff4081; }
-        }
-        .fun-box {
-            background: #fff3cd;
-            color: #ff4081;
-            padding: 15px;
             border-radius: 10px;
-            font-size: 18px;
-            font-weight: bold;
-            margin-top: 20px;
-            animation: bounce 1s infinite alternate;
-        }
-        @keyframes bounce {
-            from { transform: translateY(0); }
-            to { transform: translateY(-10px); }
         }
     </style>
 </head>
 <body>
+    <div class="falling-hearts">❤️💖💞💕</div>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    <div class="sidebar" id="sidebar">
+        <h3>Memories & Jokes</h3>
+        <p>😂 Remember when you tried to hide my phone and got caught instantly? Hilarious!</p>
+        <p>💖 Every hug from you is like a warm, cozy blanket of love.</p>
+    </div>
+
     <div class="container">
         <img src="Screenshot_20250209-234737.png" alt="Leylah's Picture">
         <h1>For My Sweet Little Sister Leylah 💖</h1>
@@ -106,5 +122,21 @@
         <p>🎀 Leylah, do you know? You are like a rainbow after the rain, making life more colorful and bright! 🌈💖</p>
         <p>Always stay as sweet and kind as you are, and never stop dreaming big! ⭐✨</p>
     </div>
+
+    <footer>
+        Made with ❤️ by SirTheProgrammer
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            let sidebar = document.getElementById("sidebar");
+            if (sidebar.style.left === "0px") {
+                sidebar.style.left = "-250px";
+            } else {
+                sidebar.style.left = "0px";
+            }
+        }
+    </script>
 </body>
 </html>
+
