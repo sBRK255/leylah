@@ -7,9 +7,14 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #ffe6f2;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
             text-align: center;
             padding: 50px;
+            animation: fadeIn 2s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
         .container {
             background: white;
@@ -17,14 +22,25 @@
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             display: inline-block;
+            animation: bounceIn 1.5s ease-in-out;
+        }
+        @keyframes bounceIn {
+            0% { transform: scale(0.5); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
         }
         img {
             width: 200px;
             border-radius: 50%;
             margin-bottom: 15px;
+            animation: spin 4s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
         h1 {
             color: #ff4081;
+            text-shadow: 2px 2px 5px #ff80ab;
         }
         p {
             color: #444;
@@ -39,6 +55,33 @@
             from { transform: scale(1); }
             to { transform: scale(1.2); }
         }
+        .sweet-words {
+            background: pink;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            animation: glow 1s infinite alternate;
+        }
+        @keyframes glow {
+            from { box-shadow: 0 0 10px pink; }
+            to { box-shadow: 0 0 20px #ff4081; }
+        }
+        .fun-box {
+            background: #fff3cd;
+            color: #ff4081;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+            animation: bounce 1s infinite alternate;
+        }
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-10px); }
+        }
     </style>
 </head>
 <body>
@@ -48,10 +91,20 @@
         <p>You are the brightest star in my sky, the sweetest melody in my heart, and the most precious gift in my life.</p>
         <p>Keep shining, keep smiling, and always remember how much you are loved! 💕</p>
         <p class="heart">❤️❤️❤️</p>
-
-   
     </div>
 
-   <center> <p style ="border-radius:10px; border:solid pink 6px ;">ila sikuambii kituuuu just joking </p></center>
+    <br>
+    <center>
+        <p class="sweet-words">Mdogo wangu mpenzi, hakuna mtu kama wewe! Nakupenda sanaaa, na daima nitakuwa hapa kukulinda na kukufanya uwe na furaha! 😘💕</p>
+    </center>
+
+    <center>
+        <p style="border-radius:10px; border:solid pink 6px; background: #ffccd5; padding: 10px; font-weight: bold;">Ila sikuambii kituuuu... Just joking! 😂💖</p>
+    </center>
+
+    <div class="fun-box">
+        <p>🎀 Leylah, do you know? You are like a rainbow after the rain, making life more colorful and bright! 🌈💖</p>
+        <p>Always stay as sweet and kind as you are, and never stop dreaming big! ⭐✨</p>
+    </div>
 </body>
 </html>
